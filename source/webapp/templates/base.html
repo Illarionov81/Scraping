@@ -16,23 +16,12 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #452b92">
         <div class="container">
-        <a class="navbar-brand" href="#">{% trans "Get data" %}</a>
+        <a class="navbar-brand" href="/">{% trans "Main page" %}</a>
         </div>
       </nav>
     </header>
 
     <div class="container pt-3">
-        <form action="{% url 'webapp:data' %}" method="get">
-            {% csrf_token %}
-            <div class="mb-3 row gx-2 text-center">
-                <div class="col-auto align-self-end ms-auto">
-                    <input  class="btn btn-lg btn-primary" type="submit"  name="data" value="Get Data"/>
-                </div>
-                <div class="col-auto align-self-end ms-auto">
-                    <input  class="btn btn-lg  btn-primary" type="submit"  name="data" value="Save Data"/>
-                </div>
-            </div>
-        </form>
         {% block content %}
         {% endblock %}
     </div>

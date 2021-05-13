@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="text-center">
+    <h3>{{ head }}</h3>
+    <span><span class="text-center" id="progress-title"></span></span><span id="dot"></span>
+    <div style="display: none"><a id="task_url" href="{% url 'webapp:task' task_id=task_id %}"></a></div>
+    <h3 id="status"> </h3>
+</div>
+
+{% if task_id %}
+    <script type="application/javascript" src="{% static 'js/message_task_check_state.js' %}"></script>
+{% endif %}
+
+{% endblock %}

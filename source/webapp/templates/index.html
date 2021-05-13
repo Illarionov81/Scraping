@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="mb-3 row gx-2 justify-content-evenly">
+    <div class="col-auto  md-auto">
+       <h6>Loaded files: </h6><br>
+        {% if files %}
+            {% for file in files %}
+                <span> <b>{{ file }}</b></span><br>
+            {% endfor %}
+        {% else %}
+            0.
+        {% endif %}
+        <br>
+        <a href="{% url 'webapp:get_files' %}">
+            <button class="btn btn-lg" style="background-color: #72c042">{% trans "Start Scraping" %}</button>
+        </a>
+    </div>
+    <div class="col-auto  md-auto">
+        <h6>Companies  in the database: </h6><br>
+        {% if company %}
+            {% for name, data in company.items %}
+                <span> <b>{{ name }}</b>  -  {{ data }} records.</span><br>
+            {% endfor %}
+        {% else %}
+            0.
+        {% endif %}
+        <br>
+        <a href="{% url 'webapp:Save_in_base' %}">
+            <button class="btn btn-lg" style="background-color: #72c042">{% trans "Save Data in db" %}</button>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
