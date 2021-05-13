@@ -24,15 +24,18 @@
 
 # Установка.
  1. Cклонировать проект с GitHub:
- 2. Cоздайте виртуальное окружение:
-   * ```python3 -m venv venv```
- 3. Активируйте его:
-   * ```. venv/bin/activate```
- 4. Устанавите окружение:
-   * ```(venv)...pip install -r requirements.txt```
- 5. Проведите Мигрирацию БД:
-   * ```(venv)...python manage.py migrate```
- 6. Для работы Selenium установить драйвер. 
+ 2. * $ git clone https://github.com/Illarionov81/Scraping.git
+ 3. Cоздайте виртуальное окружение:
+   * ```$ cd Scraping/```
+   * ```Scraping$ python3 -m venv venv```
+ 4. Активируйте его:
+   * ```Scraping$ . venv/bin/activate```
+ 5. Устанавите окружение:
+   * ```(venv)Scraping$ pip install -r requirements.txt```
+ 6. Проведите Мигрирацию БД:
+   * ```Scraping$ cd source/```
+   * ```(venv)Scraping/source$ python manage.py migrate```
+ 7. Для работы Selenium установить драйвер. 
    Ссылки на драйвера для  браузеров есть в документации по установке Selenium: https://selenium-python.readthedocs.io/installation.html.
    В корневом каталоге пакета проекта - sourse, содержится драйвер для версии браузера chrome 90.0.4430.
  7. Для запуска redis можно использовать docer:
