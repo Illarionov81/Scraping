@@ -22,7 +22,7 @@
     </header>
 
     <div class="container pt-3">
-        <form action="{% url 'webapp:data' %}" method="post">
+        <form action="{% url 'webapp:data' %}" method="get">
             {% csrf_token %}
             <div class="mb-3 row gx-2 text-center">
                 <div class="col-auto align-self-end ms-auto">

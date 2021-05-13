@@ -1,10 +1,10 @@
 from django.urls import path
 
-from webapp.views import Data
+from webapp.views import CompanyData
 
 app_name = 'webapp'
 
 urlpatterns = [
-    path('', Data.as_view(), name='data'),
+    path('', CompanyData.as_view(), name='data'),
 
  ]

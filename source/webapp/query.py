@@ -13,7 +13,6 @@ def parse_all_files():
         files = os.listdir(path=DIR)
         for f in files:
             file = os.path.relpath(f)
-            # print(file)
             open_file(os.path.join(DIR, file))
     except FileNotFoundError:
         print(f'No such file or directory: {DIR}')
@@ -40,11 +39,3 @@ def open_file(f):
             adj_close=row[5],
             volume=row[6]
         )
-
-# def get_all_tariff():
-#     with connection.cursor() as cursor:
-#         query ="""SELECT name, name FROM tariff_plan;"""
-#         cursor.execute(query)
-#         row = list(cursor.fetchall())
-#         row.append(('', ''))
-#         return row
