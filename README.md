@@ -5,6 +5,7 @@
     * Bootstrap
     * Html
     * CSS
+    * JS
     * Selenium
     * Celery / Redis
     * Sqlite3
